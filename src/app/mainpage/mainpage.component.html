@@ -11,7 +11,7 @@
             <li
               class="p-menuitem"
               (click)="liclk()"
-              *ngFor="let menu of menuitems" 
+              *ngFor="let menu of menuitems"
             >
               <a class="p-menuitem-link" href="{{ menu.url }}">{{
                 menu.label
@@ -33,19 +33,19 @@
         >
           <ul class="navbar-nav nav-underline">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#about">About</a>
+              <a class="nav-link" aria-current="page" href="#about">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
+              <a class="nav-link" href="#experience">My Experience</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
+              <a class="nav-link" href="#skills">My Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#education">Education</a>
+              <a class="nav-link" href="#education">My Education</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#contact">Contact Me</a>
             </li>
           </ul>
         </div>
@@ -86,7 +86,25 @@
               Angular advancements, they deliver high-quality software
               solutions.
             </h4>
-            <button class="btn btn-xl cntct">Contact</button>
+            <div class="row" style="display: flex; align-items: center">
+              <div class="col-12 col-md-2">
+                <a class="btn btn-xl cntct" href="#contact">Contact</a>
+              </div>
+              <div class="col-12 col-md-7">
+                <a
+                  href="assets/Mani CV.docx"
+                  download="Mani's CV"
+                  class="dwmld_lnk"
+                  ><i class="pi pi-download"></i>&nbsp;Download CV</a
+                >&nbsp;&nbsp;
+                <a
+                  href="assets/Mani Resume.pdf"
+                  class="dwmld_lnk"
+                  download="Mani's Resume"
+                  ><i class="pi pi-download"></i>&nbsp;Download Resume</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>

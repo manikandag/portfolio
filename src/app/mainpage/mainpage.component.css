@@ -55,6 +55,16 @@ a {
   padding: 1rem;
   z-index: 1;
 }
+.dwmld_lnk{
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+  font-size: 20px;
+}
+.dwmld_lnk:hover{
+cursor: pointer;
+color: greenyellow;
+}
 .contct_head{
   position: relative;
   top:2rem;
@@ -190,6 +200,10 @@ box-shadow: 4px 2px 30px 46px #0d0d0d;
   justify-content: center;
   width: 100%;
 }
+.card.cardexp {
+  background-color: grey;
+  box-shadow: 1px 3px 4px 2px black;
+}
 
 @media only screen and (max-width:768px) {
   #pfl_pic {
@@ -205,6 +219,12 @@ box-shadow: 4px 2px 30px 46px #0d0d0d;
   .list_cnct{
     font-size: 3rem;
     justify-content: center;
+  }
+  .dwmld_lnk{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    font-size: 15px;
   }
   .cntlst_div{
     height: fit-content;

@@ -66,19 +66,18 @@ export class SharedService {
       url: '#about',
     },
     {
-      label: 'Education',
-      url: '#education',
+      label: 'Experience',
+      url: '#experience',
     },
     {
       label: 'Skills',
       url: '#skills',
     },
     {
-      label: 'Experience',
-      url: '#experience',
-    },
-    {
-      label: 'Contact',
+      label: 'Education',
+      url: '#education',
+    },{
+      label: 'Contact Me',
       url: '#contact',
     },
   ];
