@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Satisfy&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap&family=Dancing+Script:wght@400..700&family=Whisper&display=swap');
+body{
+    margin: 0;
+}
+.font{
+    font-family: "Protest Riot", sans-serif;
+}
+.font1{
+    font-family: "Rubik";
+}
+.font3{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}

@@ -1,0 +1,548 @@
+<div class="container-fluid" style="padding: 0">
+  <div class="row header">
+    <div class="col-8 col-md-6">
+      <h3>PortFolio</h3>
+    </div>
+    <div class="col-4 mbl_nav">
+      <i class="pi pi-bars menu-wrapper" (click)="togglemenu()"></i>
+      <div *ngIf="isMenuOpen" (click)="menuClickHandler($event)">
+        <p-menubar>
+          <ul class="p-menu">
+            <li
+              class="p-menuitem"
+              (click)="liclk()"
+              *ngFor="let menu of menuitems" 
+            >
+              <a class="p-menuitem-link" href="{{ menu.url }}">{{
+                menu.label
+              }}</a>
+            </li>
+          </ul>
+        </p-menubar>
+      </div>
+    </div>
+    <div class="col-md-6 dsk_nav">
+      <nav
+        id="navbar"
+        class="navbar navbar-expand-lg navbar-light"
+        style="padding: 0"
+      >
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav nav-underline">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div
+    data-bs-spy="scroll"
+    data-bs-target="#navbar"
+    data-bs-smooth-scroll="true"
+    class="scrollspy-example bg-body-tertiary p-3 rounded-2"
+    tabindex="0"
+  >
+    <div class="row bg-img" id="about">
+      <div class="row pfl_row">
+        <div class="col-12 col-md-4 info1">
+          <img
+            id="pfl_pic"
+            src="assets/1708948778603_1708948776706_1678850894144.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-12 col-md-8 info">
+          <div>
+            <div style="color: #efebea">
+              <h3>Hellooo,Welcome</h3>
+              <h1>I'm Mani Kanda Prabu.</h1>
+              <h3>Front-End developer(Angular)</h3>
+            </div>
+            <h4 style="color: #efebea; margin-top: 1rem">
+              A one-year experienced Angular developer proficiently creates
+              dynamic web applications using TypeScript and Angular. They excel
+              in building scalable solutions, integrating backend services and
+              RESTful APIs seamlessly. With strong debugging skills, they ensure
+              robust application performance and efficient issue resolution.
+              Collaborative and proactive, they contribute effectively in team
+              environments. Continuously learning and staying updated with
+              Angular advancements, they deliver high-quality software
+              solutions.
+            </h4>
+            <button class="btn btn-xl cntct">Contact</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row bg-img-4" id="experience">
+      <div class="row skll_mbl">
+        <div class="col-12 title1" style="color: #120230">
+          <h1 class="font">Work Experiences</h1>
+        </div>
+        <div class="col-12 col-md-4 expcrd_div">
+          <div class="card cardexp" *ngFor="let experiences of experience">
+            <img src="{{ experiences.img }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ experiences.title }}</h5>
+              <p class="card-text">
+                <span #less style="display: block">{{
+                  experiences.text.substring(0, 100) + "..."
+                }}</span
+                ><span #more style="display: none">{{ experiences.text }}</span>
+              </p>
+              <button
+                class="btn btn-primary"
+                (click)="
+                  less.style.display == 'block'
+                    ? [
+                        (less.style.display = 'none'),
+                        (more.style.display = 'block')
+                      ]
+                    : [
+                        (less.style.display = 'block'),
+                        (more.style.display = 'none')
+                      ]
+                "
+              >
+                Show {{ less.style.display == "block" ? "More" : "Less" }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row bg-img-3" id="skills">
+      <div class="row skll_mbl">
+        <div class="col-12 title1 font"><h1>Professional Skills</h1></div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>HTML/CSS</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 90%"
+                  aria-valuenow="90"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  90%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>TypeScript</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 85%"
+                  aria-valuenow="85"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  85%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>JavaScript</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 80%"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  80%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>Angular</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 80%"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  80%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>Ionic/Angular</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 75%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  75%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>BootStrap</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 70%"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  70%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>Primeng</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 85%"
+                  aria-valuenow="85"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  85%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>Angular Material</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 70%"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  70%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>.Net Core</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 50%"
+                  aria-valuenow="50"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  50%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>Pgsql</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 70%"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  70%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>Github</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 60%"
+                  aria-valuenow="60"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  60%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-4"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card skll_crd">
+            <div class="card-body">
+              <h5>SVN</h5>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                  role="progressbar"
+                  style="width: 50%"
+                  aria-valuenow="50"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  50%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row bg-img-2" id="education">
+      <div class="row acdmcs">
+        <div class="col-12 title">
+          <h1 class="font">Academic Qualifications</h1>
+        </div>
+        <div class="col-12">
+          <p-timeline
+            [value]="events"
+            align="alternate"
+            styleClass="customized-timeline"
+            class="tl_dsktp"
+          >
+            <ng-template pTemplate="opposite" let-event>
+              <h3 style="color: midnightblue">{{ event.yop }}</h3>
+            </ng-template>
+            <ng-template pTemplate="content" let-event>
+              <div class="card cardmd">
+                <div class="card-body">
+                  <p class="card-text"></p>
+                  <ul class="aca_list">
+                    <li>
+                      <h5>{{ event.title }}</h5>
+                    </li>
+                    <li
+                      [ngStyle]="
+                        event.specialization == ''
+                          ? { display: 'none' }
+                          : { display: 'block' }
+                      "
+                    >
+                      <b>specialization : </b>{{ event.specialization }}
+                    </li>
+                    <li><b>Institute : </b>{{ event.institute }}</li>
+                    <li
+                      [ngStyle]="
+                        event.marks == ''
+                          ? { display: 'none' }
+                          : { display: 'block' }
+                      "
+                    >
+                      <b>Marks : </b>{{ event.marks }}
+                    </li>
+                    <li
+                      [ngStyle]="
+                        event.percentage == ''
+                          ? { display: 'none' }
+                          : { display: 'block' }
+                      "
+                    >
+                      <b>Percentage : </b>{{ event.percentage }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </ng-template>
+          </p-timeline>
+          <p-timeline
+            [value]="events"
+            styleClass="customized-timeline"
+            class="tl_mbl"
+          >
+            <ng-template pTemplate="opposite" let-event>
+              <h3 style="color: midnightblue">{{ event.yop }}</h3>
+            </ng-template>
+            <ng-template pTemplate="content" let-event>
+              <div class="card cardmbl">
+                <div class="card-body">
+                  <p class="card-text"></p>
+                  <ul class="aca_list">
+                    <li>
+                      <h5>{{ event.title }}</h5>
+                    </li>
+                    <li
+                      [ngStyle]="
+                        event.specialization == ''
+                          ? { display: 'none' }
+                          : { display: 'block' }
+                      "
+                    >
+                      <b>specialization : </b>{{ event.specialization }}
+                    </li>
+                    <li><b>Institute : </b>{{ event.institute }}</li>
+                    <li
+                      [ngStyle]="
+                        event.marks == ''
+                          ? { display: 'none' }
+                          : { display: 'block' }
+                      "
+                    >
+                      <b>Marks : </b>{{ event.marks }}
+                    </li>
+                    <li
+                      [ngStyle]="
+                        event.percentage == ''
+                          ? { display: 'none' }
+                          : { display: 'block' }
+                      "
+                    >
+                      <b>Percentage : </b>{{ event.percentage }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </ng-template>
+          </p-timeline>
+        </div>
+      </div>
+    </div>
+
+    <div class="row bg-img-5" style="background-color: grey" id="contact">
+      <div class="row contct_head" style="height: fit-content">
+        <h1 class="font3" style="font-size: 4.5rem">Contact Me</h1>
+        <h2 class="font3">
+          Ready to collaborate? Reach out and let's make something amazing
+          together!
+        </h2>
+      </div>
+      <div class="row cntlst_div">
+        <div class="col-6 col-md-3 list_cnct">
+          <a class="list_cnct1" href="mailto:manii17042000@gmail.com"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+        <div class="col-6 col-md-3 list_cnct">
+          <a
+            class="list_cnct1"
+            href="https://www.linkedin.com/in/manikandaprabug17/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <div class="col-6 col-md-3 list_cnct">
+          <a
+            class="list_cnct1"
+            href="//api.whatsapp.com/send?phone=919943416321"
+            target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+        </div>
+        <div class="col-6 col-md-3 list_cnct">
+          <a class="list_cnct1" href="tel: +919943416321" target="_blank"
+            ><i class="fa-solid fa-phone"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

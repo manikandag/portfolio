@@ -1,0 +1,411 @@
+a {
+  text-decoration: none;
+}
+
+/* * {
+  font-family: "Protest Riot", sans-serif;
+} */
+
+.bg-img {
+  background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)),
+    url("../../assets/programming.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.bg-img-2 {
+  background: url("../../assets/educa1.jpg");
+  height: 160vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.bg-img-3 {
+  background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)), url("../../assets/educa.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.bg-img-4 {
+  background: linear-gradient(rgba(15, 23, 43, 0.2), rgba(15, 23, 43, 0.6)), url("../../assets/leone-venter-VieM9BdZKFo-unsplash.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.bg-img-5 {
+  height: 75vh;
+}
+
+.header {
+  position: fixed;
+  background: white;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  z-index: 1;
+}
+.contct_head{
+  position: relative;
+  top:2rem;
+}
+.list_cnct{
+  font-size: 5rem;
+  justify-content: center;
+  height: fit-content;
+}
+.list_cnct1 {
+  text-decoration: none;
+  color: rgba(10, 9, 9, 0.862);
+  padding: 2rem 3.5rem;
+}
+.list_cnct1:hover{
+border: 1px solid white;
+padding: 2rem 3.5rem;
+border-radius: 25rem;
+background-color: white;
+box-shadow: 4px 2px 30px 46px #0d0d0d;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+}
+
+.info1 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+}
+
+.pfl_row {
+  height: 100%;
+}
+
+#pfl_pic {
+  height: 52%;
+  width: 67%;
+  border-radius: 15%;
+  box-shadow: 0px -4px 18px 6px grey;
+  margin-right: 8%;
+}
+
+.cntct:hover {
+  background-color: gold;
+  font-size: 25px;
+  box-shadow: 0px -1px 6px 4px rgb(148, 147, 84);
+  border-radius: 32px;
+  color: black;
+}
+
+.cntct {
+  color: gold;
+  font-size: 25px;
+}
+
+.list_cnct {
+  display: flex;
+  list-style: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+::ng-deep .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(2n) .p-timeline-event-content {
+  text-align: left;
+  justify-content: end;
+  display: flex;
+}
+
+::ng-deep p-timeline.p-element.tl_mbl {
+  display: none;
+}
+
+::ng-deep p-timeline.p-element.tl_dsktp {
+  display: block;
+}
+
+.aca_list {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.cardmd {
+  width: 18rem;
+  margin-bottom: 2rem;
+}
+
+.dsk_nav {
+  display: block;
+}
+
+.mbl_nav {
+  display: none;
+}
+
+.title1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.skll_crd {
+  width: 70%;
+  background-color: transparent;
+  height: fit-content;
+  color: white;
+  border: 2px solid gray;
+  box-shadow: 1px 1px 7px 1px grey;
+}
+
+.cardexp {
+  width: 18rem;
+  height: 27rem;
+  overflow: auto;
+  margin: 0 2rem;
+}
+
+.expcrd_div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media only screen and (max-width:768px) {
+  #pfl_pic {
+    height: auto;
+    width: 52.5%;
+    border-radius: 15%;
+    box-shadow: 0px -4px 18px 6px grey;
+    margin-right: 0;
+  }
+  .contct_head{
+    text-align: center;
+  }
+  .list_cnct{
+    font-size: 3rem;
+    justify-content: center;
+  }
+  .cntlst_div{
+    height: fit-content;
+ justify-content: center;
+ padding-right: 0px;
+ }
+
+  .expcrd_div {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .cardexp {
+    width: 18rem;
+    height: 27rem;
+    overflow: auto;
+    margin: 0 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .info1 {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 27%;
+  }
+
+  .pfl_row,
+  .acdmcs {
+    height: 100%;
+    margin: 0;
+  }
+
+  .bg-img {
+    background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)), url("../../assets/programming.jpg");
+    height: 145vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  .bg-img-2 {
+    background: url("../../assets/educa1.jpg");
+    height: 215vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  .bg-img-3 {
+    background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)), url("../../assets/educa.jpg");
+    height: 185vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding-bottom: 3%;
+  }
+
+  .bg-img-4 {
+    background: linear-gradient(rgba(15, 23, 43, 0.2), rgba(15, 23, 43, 0.6)), url("../../assets/leone-venter-VieM9BdZKFo-unsplash.jpg");
+    height: 225vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 73%;
+  }
+
+  .cardmbl {
+    width: 44.5vmin;
+    margin-bottom: 1rem;
+  }
+
+  ::ng-deep p-timeline.p-element.tl_dsktp {
+    display: none;
+  }
+
+  ::ng-deep p-timeline.p-element.tl_mbl {
+    display: block;
+  }
+
+  .dsk_nav {
+    display: none;
+  }
+
+  .mbl_nav {
+    display: flex;
+    justify-content: end;
+    padding-top: 3%;
+  }
+
+  .menu_lst {
+    padding: 5px 20px;
+  }
+
+  .menucrd {
+    display: initial;
+    z-index: 1;
+    margin: 0px;
+    position: absolute;
+    text-align: center;
+    margin-top: 5%;
+    display: none;
+  }
+
+  .pi-bard:hover {
+    display: block;
+  }
+
+  .skll_mbl {
+    margin: 0;
+  }
+
+  .skll_crd {
+    margin-bottom: 2%;
+  }
+
+  .p-menuitem-link {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    display: block;
+  }
+
+  .p-menuitem-link:hover {
+    background-color: #f0f0f0;
+  }
+
+  ::ng-deep p-menubar {
+    position: absolute;
+    display: block;
+    right: 15px;
+    top: 1%;
+    top: 75%;
+    width: fit-content;
+    padding: 0;
+  }
+
+  ::ng-deep ul.p-menu {
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-bottom: 0px;
+    width: fit-content;
+  }
+
+  ::ng-deep pi-bars:hover {
+    cursor: pointer;
+  }
+
+  .title {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 2%;
+  }
+
+  .title1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(44, 31, 31, 0.685);
+}
+@media (hover: none) {
+  .list_cnct1:hover{
+    border: none;
+    padding: 2rem 3.5rem;
+    border-radius: 0;
+    background-color:inherit;
+    box-shadow: none;
+    }
+    .cntct:hover {
+      background-color: inherit;
+      font-size: 25px;
+      box-shadow: none;
+      border-radius: 0;
+      color: gold;
+    }
+}
