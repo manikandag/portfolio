@@ -9,6 +9,7 @@ import { SharedService } from '../shared.service';
 })
 export class MainpageComponent implements OnInit {
   experience: any;
+  skills: any;
 
   constructor( private share_serv:SharedService) {}
   events: object[] = [];
@@ -18,6 +19,7 @@ export class MainpageComponent implements OnInit {
     this.events = this.share_serv.events
 this.menuitems=this.share_serv.menu
     this.experience=this.share_serv.exp
+    this.skills=this.share_serv.skll_crd
   }
   togglemenu(){
     this.isMenuOpen=!this.isMenuOpen
